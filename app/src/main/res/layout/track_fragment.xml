@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_happy_place_cv_main_marginStartEnd"
+        android:layout_marginEnd="@dimen/item_happy_place_cv_main_marginStartEnd"
+        android:background="@color/white_color"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/item_happy_place_cv_corner_radius"
+        app:cardElevation="@dimen/item_happy_place_cv_elevation"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/item_happy_places_content_padding">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_happy_place_ll_marginStart"
+                android:layout_marginEnd="@dimen/item_happy_place_ll_marginEnd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/songTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/item_happy_place_title_textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Name" />
+
+                <TextView
+                    android:id="@+id/currentProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="17dp"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/item_happy_place_title_textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                    app:layout_constraintStart_toStartOf="@+id/songTitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1:45" />
+
+                <TextView
+                    android:id="@+id/totalDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="17dp"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/item_happy_place_title_textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                    app:layout_constraintEnd_toEndOf="@+id/songTitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2:45" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toTopOf="@+id/play_pause_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" /><![CDATA[
+
+                />
+
+
+
+                ]]>
+
+                <ImageButton
+                    android:id="@+id/prev_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="39dp"
+                    android:backgroundTint="#F44336"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:layout_constraintEnd_toEndOf="@+id/lyrics_btn"
+                    app:layout_constraintStart_toStartOf="@+id/seekBar"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+                <ImageButton
+                    android:id="@+id/play_pause_btn"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#F44336"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/next_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="55dp"
+                    android:backgroundTint="#F44336"
+                    android:src="@android:drawable/ic_media_next"
+                    app:layout_constraintEnd_toEndOf="@+id/seekBar"
+                    app:layout_constraintStart_toEndOf="@+id/play_pause_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+                <ImageButton
+                    android:id="@+id/lyrics_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="13dp"
+                    android:backgroundTint="#009688"
+                    android:paddingStart="@dimen/add_screen_btn_save_marginTop"
+                    android:paddingEnd="@dimen/add_screen_btn_save_marginTop"
+                    android:src="@android:drawable/star_big_on"
+                    app:layout_constraintEnd_toStartOf="@+id/play_pause_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
+
+                <ImageButton
+                    android:id="@+id/notification_btn"
+                    android:layout_width="67dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginEnd="39dp"
+                    android:backgroundTint="#009688"
+                    android:paddingStart="@dimen/add_screen_btn_save_marginTop"
+                    android:paddingEnd="@dimen/add_screen_btn_save_marginTop"
+                    android:src="@android:drawable/stat_notify_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/next_song"
+                    app:layout_constraintStart_toStartOf="@+id/play_pause_btn"
+                    app:layout_constraintTop_toTopOf="@+id/lyrics_btn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
